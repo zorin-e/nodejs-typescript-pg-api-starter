@@ -6,8 +6,11 @@
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts}' --quiet",
     "lint-fix": "npm run lint -- --fix",
-    "dev": "nodemon -r tsconfig-paths/register --exec ts-node src/index.ts --watch src",
-    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "clean": "rm -rf ./build && mkdir ./build",
+    "build-ts": "tsc",
+    "build": "npm run clean && npm run build-ts",
+    "dev": "nodemon -r tsconfig-paths/register --exec ts-node ./src/index.ts --watch ./src",
+    "start": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/index.js",
     "test:watch": "jest --watch",
     "test": "jest --coverage"
   },
