@@ -1,4 +1,8 @@
-# Boilerplate for developing API on nodejs and pg with typescript, linter and jest
+# Boilerplate for developing API on nodejs, ts and pg
+
+## Lint, prettier and jest included
+
+## Let's started
 
 ### Install dependencies
 ```
