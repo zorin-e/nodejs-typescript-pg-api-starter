@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-nodejs-typescript-pg-api",
-  "version": "1.0.0",
-  "description": "Boilerplate for developing API on nodejs and pg with typescript, linter and jest",
-  "main": "index.js",
+  "name": "nodejs-typescript-pg-api-starter",
+  "version": "1.0.1",
+  "description": "Boilerplate for developing API on nodejs, ts and pg. Lint, prettier and jest included",
+  "main": "build/index.js",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts}' --quiet",
     "lint:fix": "npm run lint -- --fix",
