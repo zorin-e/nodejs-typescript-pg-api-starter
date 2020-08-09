@@ -1,18 +1,18 @@
 {
-  "name": "boilerplate-nodejs-typescript-pg-api",
-  "version": "1.0.0",
-  "description": "Boilerplate for developing API on nodejs and pg with typescript, linter and jest",
-  "main": "index.js",
+  "name": "nodejs-typescript-pg-api-starter",
+  "version": "1.0.1",
+  "description": "Boilerplate for developing API on nodejs, ts and pg. Lint, prettier and jest included",
+  "main": "build/index.js",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts}' --quiet",
-    "lint-fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint -- --fix",
     "clean": "rm -rf ./build && mkdir ./build",
     "build-ts": "tsc",
     "build": "npm run clean && npm run build-ts",
     "dev": "nodemon -r tsconfig-paths/register --exec ts-node ./src/index.ts --watch ./src",
     "start": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/index.js",
-    "test:watch": "jest --watch",
-    "test": "jest --coverage"
+    "test:unit:watch": "jest --watch",
+    "test:unit": "jest --coverage"
   },
   "keywords": [],
   "author": "Egor Zorin",
@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "npm run lint-fix"
+      "npm run lint:fix"
     ]
   }
 }
