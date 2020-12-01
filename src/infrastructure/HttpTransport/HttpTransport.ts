@@ -1,5 +1,5 @@
 import { IConnectionTransport } from './IConnectionTransport';
-import { ResponseFormat } from '@/infrastructure/Response';
+import { IResponseFormat } from '@/infrastructure/Response';
 import { Formation } from './Formation';
 import { TRequestProps } from './TRequestProps';
 
@@ -9,7 +9,7 @@ export default class HttpTransport {
     this.client = client;
   }
 
-  post(url: string, props?: TRequestProps): Promise<ResponseFormat> {
+  post(url: string, props?: TRequestProps): Promise<IResponseFormat> {
     const requestProps = new Formation({
       url,
       method: 'post',
@@ -20,7 +20,7 @@ export default class HttpTransport {
     });
   }
 
-  get(url: string, props?: TRequestProps): Promise<ResponseFormat> {
+  get(url: string, props?: TRequestProps): Promise<IResponseFormat> {
     const requestProps = new Formation({
       url,
       method: 'get',
@@ -31,7 +31,7 @@ export default class HttpTransport {
     });
   }
 
-  put(url: string, props?: TRequestProps): Promise<ResponseFormat> {
+  put(url: string, props?: TRequestProps): Promise<IResponseFormat> {
     const requestProps = new Formation({
       url,
       method: 'put',
@@ -42,7 +42,7 @@ export default class HttpTransport {
     });
   }
 
-  delete(url: string, props?: TRequestProps): Promise<ResponseFormat> {
+  delete(url: string, props?: TRequestProps): Promise<IResponseFormat> {
     const requestProps = new Formation({
       url,
       method: 'delete',

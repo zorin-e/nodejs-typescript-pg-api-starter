@@ -1,1 +1,1 @@
-export { ResponseFormat } from './ResponseFormat.i';
+export { IResponseFormat } from './IResponseFormat';

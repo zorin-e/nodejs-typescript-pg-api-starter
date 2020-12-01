@@ -1,6 +1,6 @@
 import { IConnectionProps } from './IConnectionProps';
-import { ResponseFormat } from '@/infrastructure/Response';
+import { IResponseFormat } from '@/infrastructure/Response';
 
 export interface IConnectionTransport {
-  request({ method, url }: IConnectionProps): Promise<ResponseFormat>;
+  request({ method, url }: IConnectionProps): Promise<IResponseFormat>;
 }

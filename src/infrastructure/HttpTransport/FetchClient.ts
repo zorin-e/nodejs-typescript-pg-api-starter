@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import { IConnectionTransport } from './IConnectionTransport';
-import { ResponseFormat } from '@/infrastructure/Response';
+import { IResponseFormat } from '@/infrastructure/Response';
 import { TProps } from '@/infrastructure/TProps';
 
 export default class FetchClent implements IConnectionTransport {
@@ -12,7 +12,7 @@ export default class FetchClent implements IConnectionTransport {
     url: string;
     method: string;
     props?: TProps;
-  }): Promise<ResponseFormat> {
+  }): Promise<IResponseFormat> {
     const response = await fetch(url, { method, ...props });
     const data = await response.json();
     return {
