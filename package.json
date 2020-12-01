@@ -9,8 +9,8 @@
     "clean": "rm -rf ./build && mkdir ./build",
     "build-ts": "tsc",
     "build": "npm run clean && npm run build-ts",
-    "dev": "nodemon -r tsconfig-paths/register --exec ts-node ./src/index.ts --watch ./src",
-    "start": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/index.js",
+    "dev": "NODE_ENV=development nodemon -r tsconfig-paths/register --exec ts-node ./src/index.ts --watch ./src",
+    "start": "npm run build && NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/index.js",
     "test:unit:watch": "jest --watch",
     "test:unit": "jest --coverage"
   },
